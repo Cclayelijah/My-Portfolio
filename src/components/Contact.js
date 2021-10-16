@@ -1,38 +1,94 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [formResponse, setFormResponse] = useState(""); //
+
+  const sendForm = (e) => {
+    e.preventDefault();
+    if (submitted) {
+      // my own honeypot
+      const data = {};
+      const elements = Array.from(e.target);
+      elements.map((input) => (data[input.name] = input.value));
+
+      console.log(JSON.stringify(data));
+      // Construct an HTTP request
+      var xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action, true);
+      xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+      xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+      // Send the collected data as JSON
+      xhr.send(JSON.stringify(data));
+
+      // Callback function
+      xhr.onloadend = (response) => {
+        if (response.target.status === 200) {
+          // The form submission was successful
+          form.reset();
+          setFormResponse(
+            "Thank you for reaching out! I'll surely be ecstatic when I see your message :)"
+          );
+        } else {
+          // The form submission failed
+          setFormResponse("There was a problem submitting the form.");
+          console.error(JSON.parse(response.target.response).message);
+        }
+      };
+    } else console.log("better luck next time, bot!");
+  };
+
   return (
     <Container>
       <h1>Contact Me</h1>
-      <form action="" type="post">
+      <form
+        action=""
+        type="post"
+        onSubmit={sendForm}
+        className={submitted ? "hide" : ""}
+      >
         <div className="name">
           <input
             className="rname"
             type="text"
-            name="fname"
+            name="firstname"
             placeholder="First Name"
-            required="true"
+            required={true}
           />
           <input
             className="lname"
             type="text"
-            name="lname"
+            name="lastname"
             placeholder="Last Name"
-            required="true"
+            required={true}
           />
         </div>
 
-        <input type="text" name="email" placeholder="Email" required="true" />
+        <input
+          type="text"
+          name="reply_to"
+          placeholder="Email"
+          required={true}
+        />
         <textarea
           type="text-area"
           name="description"
           placeholder="Description"
           rows="5"
-          required="true"
+          required={true}
         />
-        <button type="submit">Send</button>
+        <button
+          type="submit"
+          onClick={() => {
+            setSubmitted(true);
+          }}
+        >
+          Send
+        </button>
       </form>
+      <p className={`response ${submitted ? "" : "hide"}`}>${formResponse}</p>
     </Container>
   );
 };
@@ -41,6 +97,13 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  p{
+    justify-self: center;
+    text-align: center;
+  }
+  .hide{
+    display: none;
+  }
     div {
       display: flex;
       flex: 1;
