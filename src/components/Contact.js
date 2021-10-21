@@ -16,7 +16,7 @@ const Contact = () => {
       console.log(JSON.stringify(data));
       // Construct an HTTP request
       var xhr = new XMLHttpRequest();
-      xhr.open(form.method, form.action, true);
+      xhr.open(e.target.method, e.target.action, true);
       xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
       xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
 
@@ -27,7 +27,7 @@ const Contact = () => {
       xhr.onloadend = (response) => {
         if (response.target.status === 200) {
           // The form submission was successful
-          form.reset();
+          e.target.reset();
           setFormResponse(
             "Thank you for reaching out! I'll surely be ecstatic when I see your message :)"
           );
@@ -44,7 +44,7 @@ const Contact = () => {
     <Container>
       <h1>Contact Me</h1>
       <form
-        action=""
+        action="https://67wwqzvnth.execute-api.us-east-1.amazonaws.com/dev/Contact"
         type="post"
         onSubmit={sendForm}
         className={submitted ? "hide" : ""}
@@ -66,16 +66,11 @@ const Contact = () => {
           />
         </div>
 
-        <input
-          type="text"
-          name="reply_to"
-          placeholder="Email"
-          required={true}
-        />
+        <input type="text" name="email" placeholder="Email" required={true} />
         <textarea
           type="text-area"
-          name="description"
-          placeholder="Description"
+          name="message"
+          placeholder="Content"
           rows="5"
           required={true}
         />
@@ -88,7 +83,7 @@ const Contact = () => {
           Send
         </button>
       </form>
-      <p className={`response ${submitted ? "" : "hide"}`}>${formResponse}</p>
+      <p className={`response ${submitted ? "" : "hide"}`}>{formResponse}</p>
     </Container>
   );
 };
