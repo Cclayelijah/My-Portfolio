@@ -92,83 +92,82 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  p{
+  p {
     justify-self: center;
     text-align: center;
   }
-  .hide{
+  .hide {
     display: none;
   }
-    div {
+  div {
+    display: flex;
+    flex: 1;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .name {
       display: flex;
-      flex: 1;
-    }
-    form {
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      .name {
-        display: flex;
-        width: 100%;
-        .lname {
+      .lname {
         max-height: 72px;
-          flex: 1;
-          margin-left: 10px;
-        }
-        .rname {
-        max-height: 72px;
-          margin-right: 10px;
-          flex: 1;
-        }
+        flex: 1;
+        margin-left: 10px;
       }
+      .rname {
+        max-height: 72px;
+        margin-right: 10px;
+        flex: 1;
+      }
+    }
 
+    input,
+    textarea {
+      font-size: 18px;
+      margin: 10px 0;
+      padding: 14px;
+      border-radius: 10px;
+      color: #566573;
+      border: 2px solid #566573;
+      outline: none;
+      width: 100%;
+    }
+    input:focus,
+    textarea:focus {
+      border: 2px solid #f1948a;
+    }
+    button {
+      width: fit-content;
+      font-size: 18px;
+      margin: 10px 0;
+      padding: 14px 34px;
+      border-radius: 10px;
+      color: #566573;
+      background-color: #f0f2f5;
+      border: 2px solid #566573;
+      outline: none;
+    }
+    button:hover {
+      //color: #f1948a;
+      //border: 2px solid #f1948a;
+      background-color: #85c1e9;
+      color: white;
+    }
+    @media (max-width: 570px) {
       input,
       textarea {
-        font-size: 18px;
-        margin: 10px 0;
-        padding: 14px;
-        border-radius: 10px;
-        color: #566573;
-        border: 2px solid #566573;
-        outline: none;
-        width:100%;
+        max-width: 100%;
       }
-      input:focus,
-      textarea:focus {
-        border: 2px solid #f1948a;
-      }
-      button {
-        width: fit-content;
-        font-size: 18px;
-        margin: 10px 0;
-        padding: 14px 34px;
-        border-radius: 10px;
-        color: #566573;
-        background-color: #f0f2f5;
-        border: 2px solid #566573;
-        outline: none;
-      }
-      button:hover {
-        //color: #f1948a;
-        //border: 2px solid #f1948a;
-        background-color: #85c1e9;
-        color: white;
-      }
-      @media (max-width: 570px) {
-        input,
-        textarea {
-          max-width: 100%;
+      .name {
+        flex-direction: column;
+        .lname {
+          display: inline;
+          margin-left: 0;
         }
-        .name {
-          flex-direction: column;
-          .lname {
-            display: inline;
-            margin-left: 0;
-          }
-          .rname {
-            display: inline;
-            margin-right: 0;
-          }
+        .rname {
+          display: inline;
+          margin-right: 0;
         }
       }
     }
