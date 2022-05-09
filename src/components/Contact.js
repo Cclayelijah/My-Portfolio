@@ -4,16 +4,29 @@ import styled from "styled-components";
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const myForm = e.currentTarget;
+    const formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        "form-name": e.target.getAttribute("name"),
+        ...formData,
+      }).toString(),
+    })
+      .then(setSubmitted(true))
+      .catch((error) => alert(error));
+  };
+
   return (
     <Container>
       <h1>Contact Me</h1>
       <form
         action="https://67wwqzvnth.execute-api.us-east-1.amazonaws.com/dev/Contact"
         method="post"
-        onSubmit={(e) => {
-          e.preventDefault();
-          setSubmitted(true);
-        }}
+        onSubmit={handleSubmit}
         className={submitted ? "hide" : ""}
         name="contact"
         netlify
