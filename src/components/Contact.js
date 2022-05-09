@@ -45,7 +45,7 @@ const Contact = () => {
         <button type="submit">Send</button>
       </form>
       <p className={`response ${submitted ? "" : "hide"}`}>
-        Thank you for contacting me &#128640;;
+        Thank you for contacting me &#128640;
       </p>
     </Container>
   );
