@@ -8,21 +8,23 @@ const Projects = () => {
       <h1>My Projects</h1>
       <div className="wrapper">
         <Card
-          title="LinkedIn Clone"
-          url="https://cclayelijah.github.io/linkedin-clone/"
-          description="A LinkedIn Clone I built with React and uses Firebase for Google Authentication and database storage."
-          imageURL="/images/projects/linkedin.jpg"
+          title="HIPOS Technology"
+          url={"https://hipostech.com/"}
+          description={
+            "A manufacturing & sourcing company in Shenzhen, China that does business internationally."
+          }
+          imageURL="/images/projects/hipos.jpeg"
         />
         <Card
           title="Vote Kendalyn"
-          url="https://votekendalyn.com/"
-          description="A WordPress website built for my client who is running for Mayor in Bountiful. I think she's gonna win!"
+          url=""
+          description="A WordPress site I built for the Mayor of Bountiful when she was campaigning for the election."
           imageURL="/images/projects/kendalyn.jpg"
         />
         <Card
           title="True Review Guru"
           url="https://truereviewguru.com/"
-          description="A WordPress website where anyone can sign up and learn to be a blogger for free! A personal project with SEO."
+          description="A WordPress website where anyone can sign up and learn to be a blogger for free! An SEO project."
           imageURL="/images/projects/trg.jpg"
         />
         <Card
@@ -30,6 +32,12 @@ const Projects = () => {
           url="https://tedxbountiful.com/"
           description="A WordPress site that I built for my client who was responsible for organizing TEDx events in Bountiful."
           imageURL="/images/projects/tedx.jpg"
+        />
+        <Card
+          title="LinkedIn Clone"
+          url=""
+          description="A LinkedIn Clone I built with React and uses Firebase for Google Authentication and DB. Coming Soon!"
+          imageURL="/images/projects/linkedin.jpg"
         />
       </div>
     </Container>

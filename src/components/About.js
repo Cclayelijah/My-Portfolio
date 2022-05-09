@@ -16,15 +16,14 @@ const About = () => {
         </div>
       </div>
       <p>
-        I love computers and anything to do with them. I love creating things,
-        as art is much more than simply human expression. One day, I will start
-        a software company. Another day I will own multiple companies. I am
-        confident, ambitious and adventurous. My greatest strength is perhaps
-        effective learning. I make quick work of pretty much anything new I pick
-        up. I like sports, especially longboarding and mountain biking. I can
-        hack your mum faster than she can power on her computer (lol, as if!). I
-        must say I appreciate music on like a whole other level, though I wish I
-        wrote more of my own. I love poetry! Did I mention I speak Chinese? :)
+        I like computers, data, and aesthetic design. I love any form of art,
+        especially music. I love the sense of accomplishment when I create
+        something amazing. One day, I will build a company that improves the
+        lives of others. I am confident, ambitious and adventurous. My greatest
+        strength is perhaps robust learning. I make quick work of pretty much
+        anything new I pick up. I like sports, especially longboarding and
+        mountain biking. I enjoy web scraping and pen testing. I love poetry!
+        Did I mention I speak Chinese? &#128526;
       </p>
       <h2>My Dev Skills</h2>
       <div className="my-skills">
@@ -41,17 +40,17 @@ const About = () => {
           </div>
           <div className="container">
             <div className="skills seven">
-              ReactJS <span>70%</span>
+              ReactJS <span>80%</span>
             </div>
           </div>
           <div className="container">
             <div className="skills six">
-              NodeJS <span>60%</span>
+              NodeJS <span>70%</span>
             </div>
           </div>
           <div className="container">
             <div className="skills seven">
-              MongoDB <span>70%</span>
+              TypeScript <span>50%</span>
             </div>
           </div>
         </div>
@@ -63,7 +62,7 @@ const About = () => {
           </div>
           <div className="container">
             <div className="skills seven">
-              PHP/MySQL<span>70%</span>
+              SQL<span>80%</span>
             </div>
           </div>
 

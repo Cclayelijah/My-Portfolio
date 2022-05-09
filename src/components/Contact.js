@@ -3,51 +3,19 @@ import styled from "styled-components";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [formResponse, setFormResponse] = useState(""); //
-
-  const sendForm = (e) => {
-    e.preventDefault();
-    if (submitted) {
-      // my own honeypot
-      const data = {};
-      const elements = Array.from(e.target);
-      elements.map((input) => (data[input.name] = input.value));
-
-      console.log(JSON.stringify(data));
-      // Construct an HTTP request
-      var xhr = new XMLHttpRequest();
-      xhr.open(e.target.method, e.target.action, true);
-      xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
-      xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-
-      // Send the collected data as JSON
-      xhr.send(JSON.stringify(data));
-
-      // Callback function
-      xhr.onloadend = (response) => {
-        if (response.target.status === 200) {
-          // The form submission was successful
-          e.target.reset();
-          setFormResponse(
-            "Thank you for reaching out! I'll surely be ecstatic when I see your message :)"
-          );
-        } else {
-          // The form submission failed
-          setFormResponse("There was a problem submitting the form.");
-          console.error(JSON.parse(response.target.response).message);
-        }
-      };
-    } else console.log("better luck next time, bot!");
-  };
 
   return (
     <Container>
       <h1>Contact Me</h1>
       <form
         action="https://67wwqzvnth.execute-api.us-east-1.amazonaws.com/dev/Contact"
-        type="post"
-        onSubmit={sendForm}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSubmitted(true);
+        }}
         className={submitted ? "hide" : ""}
+        name="contact"
+        netlify
       >
         <div className="name">
           <input
@@ -74,16 +42,11 @@ const Contact = () => {
           rows="5"
           required={true}
         />
-        <button
-          type="submit"
-          onClick={() => {
-            setSubmitted(true);
-          }}
-        >
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
-      <p className={`response ${submitted ? "" : "hide"}`}>{formResponse}</p>
+      <p className={`response ${submitted ? "" : "hide"}`}>
+        Thank you for contacting me &#128640;;
+      </p>
     </Container>
   );
 };
