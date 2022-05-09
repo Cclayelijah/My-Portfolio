@@ -9,6 +9,7 @@ const Contact = () => {
       <h1>Contact Me</h1>
       <form
         action="https://67wwqzvnth.execute-api.us-east-1.amazonaws.com/dev/Contact"
+        method="post"
         onSubmit={(e) => {
           e.preventDefault();
           setSubmitted(true);
@@ -17,6 +18,7 @@ const Contact = () => {
         name="contact"
         netlify
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div className="name">
           <input
             className="rname"
