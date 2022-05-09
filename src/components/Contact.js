@@ -8,13 +8,12 @@ const Contact = () => {
     e.preventDefault();
     const myForm = e.currentTarget;
     const formData = new FormData(myForm);
+    formData.append("form-name", e.target.getAttribute("name"));
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        "form-name": e.target.getAttribute("name"),
-        ...formData,
-      }).toString(),
+      body: new URLSearchParams(formData).toString(),
     })
       .then(setSubmitted(true))
       .catch((error) => alert(error));
