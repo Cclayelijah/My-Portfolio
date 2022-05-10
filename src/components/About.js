@@ -49,15 +49,15 @@ const About = () => {
             </div>
           </div>
           <div className="container">
-            <div className="skills five">
-              TypeScript <span>50%</span>
+            <div className="skills six">
+              TypeScript <span>60%</span>
             </div>
           </div>
         </div>
         <div className="right">
           <div className="container">
-            <div className="skills eight">
-              WordPress <span>80%</span>
+            <div className="skills nine">
+              WordPress <span>90%</span>
             </div>
           </div>
           <div className="container">
