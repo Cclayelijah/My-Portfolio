@@ -16,14 +16,15 @@ const About = () => {
         </div>
       </div>
       <p>
-        I like computers, data, and aesthetic design. I love any form of art,
-        especially music. I love the sense of accomplishment when I create
-        something amazing. One day, I will build a company that improves the
-        lives of others. I am confident, ambitious and adventurous. My greatest
-        strength is perhaps robust learning. I make quick work of pretty much
-        anything new I pick up. I like sports, especially longboarding and
-        mountain biking. I enjoy web scraping and pen testing. I love poetry!
-        Did I mention I speak Chinese? &#128526;
+        I like computers, programming, and providing value to society. I love
+        the sense of accomplishment when I create something amazing. One day, I
+        will build a company that improves the lives of others. I am confident,
+        ambitious and adventurous. My greatest strength is perhaps learning. I'm
+        a natural at almost anything I pick up. I like sports, especially
+        longboarding and mountain biking. Things that make me happy include:
+        k-pop, hot chocolate, data, anime, video games and pen testing. I
+        appreciate any form of art, especially music. I like poetry too! Did I
+        mention I speak Chinese? &#128526;
       </p>
       <h2>My Dev Skills</h2>
       <div className="my-skills">
