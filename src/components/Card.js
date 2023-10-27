@@ -5,7 +5,7 @@ const Card = ({ title, url, description, imageURL, github, demo }) => {
   return (
     <>
     {url ?
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noreferrer">
         <Container>
           <img src={imageURL} alt="" />
           <div className="info">
@@ -23,7 +23,7 @@ const Card = ({ title, url, description, imageURL, github, demo }) => {
               </Github></a></p>}
           </div>
         </Container>
-        
+
       </a>
       : <Container>
       <img src={imageURL} alt="" />
