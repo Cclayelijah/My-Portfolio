@@ -19,11 +19,12 @@ const About = () => {
         I like computers, programming, and providing value to society. I love
         the sense of accomplishment when I create something amazing. One day, I
         will build a company that improves the lives of others. I am confident,
-        ambitious and adventurous. My greatest strength is perhaps learning. I'm
-        a natural at almost anything I pick up. I like sports, especially
+        ambitious and adventurous. My greatest strength is perhaps learning. 
+        I can figure out how to do just about anything. I like
         longboarding and mountain biking. Things that make me happy include:
-        k-pop, hot chocolate, data, anime, video games and pen testing. I
-        appreciate any form of art, especially music. I like poetry too! Did I
+        k-pop, hot chocolate, foreign films, and my family. I
+        appreciate any form of art, especially music, so I made a rhythm game. 
+        I like poetry so I made a poetry blog inspired by paulgraham.com! Did I
         mention I speak Chinese? &#128526;
       </p>
       <h2>My Dev Skills</h2>
@@ -36,22 +37,22 @@ const About = () => {
           </div>
           <div className="container">
             <div className="skills eight">
-              JavaScript <span>80%</span>
-            </div>
-          </div>
-          <div className="container">
-            <div className="skills eight">
               ReactJS <span>80%</span>
             </div>
           </div>
           <div className="container">
-            <div className="skills seven">
-              NodeJS <span>70%</span>
+            <div className="skills eight">
+              NodeJS <span>80%</span>
             </div>
           </div>
           <div className="container">
-            <div className="skills six">
-              TypeScript <span>60%</span>
+            <div className="skills seven">
+              TypeScript <span>70%</span>
+            </div>
+          </div>
+          <div className="container">
+            <div className="skills seven">
+              C# (ASP.Net Core) <span>70%</span>
             </div>
           </div>
         </div>
@@ -63,23 +64,22 @@ const About = () => {
           </div>
           <div className="container">
             <div className="skills eight">
-              SQL<span>80%</span>
+              Java <span>80%</span>
             </div>
           </div>
-
           <div className="container">
             <div className="skills eight">
-              Python <span>80%</span>
+              SQL <span>80%</span>
             </div>
           </div>
           <div className="container">
             <div className="skills seven">
-              C++ <span>70%</span>
+              Python (Django) <span>70%</span>
             </div>
           </div>
           <div className="container">
-            <div className="skills seven">
-              Java <span>70%</span>
+            <div className="skills six">
+              Swift (IOS) <span>60%</span>
             </div>
           </div>
         </div>
