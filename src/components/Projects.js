@@ -8,6 +8,20 @@ const Projects = () => {
       <h1>My Projects</h1>
       <div className="wrapper">
         <Card
+          title="OctaChop"
+          url="https://octachop.com/"
+          description="An online rhythm game built with Next.js and P5.js. On track to finishing the MVP by the start of 2024."
+          imageURL="/images/projects/octachop.jpg"
+          demo="https://youtu.be/pE3YqqcCbCI?si=AF40FJKujGbuT2mP"
+        />
+        <Card
+          title="BrosToday"
+          url="https://brostoday.com/"
+          description="Django app to guide you through your pushup journey and compete with your friends. It was my sister's idea!"
+          imageURL="/images/projects/brostoday.jpg"
+          github="https://github.com/Cclayelijah/BrosToday"
+        />
+        <Card
           title="HIPOS Technology"
           url={"https://hipostech.com/"}
           description={
@@ -16,28 +30,20 @@ const Projects = () => {
           imageURL="/images/projects/hipos.jpeg"
         />
         <Card
-          title="Vote Kendalyn"
-          url=""
-          description="A WordPress site I built for the Mayor of Bountiful when she was campaigning for the election."
-          imageURL="/images/projects/kendalyn.jpg"
-        />
-        <Card
           title="True Review Guru"
           url="https://truereviewguru.com/"
-          description="A WordPress website where anyone can sign up and learn to be a blogger for free! An SEO project."
+          description="YouTube-style tech blog so creators can make money blogging and I can end up on top. An SEO project."
           imageURL="/images/projects/trg.jpg"
         />
         <Card
-          title="TEDx Bountiful"
-          url="https://tedxbountiful.com/"
-          description="A WordPress site that I built for my client who was responsible for organizing TEDx events in Bountiful."
-          imageURL="/images/projects/tedx.jpg"
+          title="Vote Kendalyn"
+          description="A WordPress site I built for the Mayor of Bountiful, UT in 2021. I also ran her email campaigns using SendGrid."
+          imageURL="/images/projects/kendalyn.jpg"
         />
         <Card
-          title="LinkedIn Clone"
-          url=""
-          description="A LinkedIn Clone I built with React and uses Firebase for Google Authentication and DB. Coming Soon!"
-          imageURL="/images/projects/linkedin.jpg"
+          title="TEDx Bountiful"
+          description="A WordPress site that I built for my client who was responsible for organizing TEDx events in Bountiful."
+          imageURL="/images/projects/tedx.jpg"
         />
       </div>
     </Container>
@@ -54,7 +60,7 @@ const Container = styled.div`
   }
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
   }
   ${Card}:hover {

@@ -8,7 +8,7 @@ const Panel = () => {
     <Container>
       <div className="top">
         <div className="heading">
-          <img src="/images/elijah.jpg" alt="" />
+          <img src="/images/profile pic.jpg" alt="" />
           <h2>Elijah Cannon</h2>
           <div className="title">
             <span>Software Engineer</span>
